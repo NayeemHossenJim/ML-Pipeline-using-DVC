@@ -4,7 +4,6 @@ import os
 from sklearn.model_selection import train_test_split
 import yaml
 
-
 def load_data(data_url: str) -> pd.DataFrame:
     try:
         df = pd.read_csv(data_url)
@@ -17,8 +16,6 @@ def load_data(data_url: str) -> pd.DataFrame:
         print(f"Error: An unexpected error occurred while loading the data.")
         print(e)
         raise
-
-
 
 def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     try:
@@ -34,9 +31,6 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
         print(e)
         raise
 
-
-
-
 def save_data(train_data: pd.DataFrame, test_data: pd.DataFrame, data_path: str) -> None:
     try:
         data_path = os.path.join(data_path, 'raw')
@@ -47,7 +41,6 @@ def save_data(train_data: pd.DataFrame, test_data: pd.DataFrame, data_path: str)
         print(f"Error: An unexpected error occurred while saving the data.")
         print(e)
         raise
-
 
 def main():
     try:
