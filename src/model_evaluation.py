@@ -1,8 +1,7 @@
+import json
+import pickle
 import numpy as np
 import pandas as pd
-
-import pickle
-import json
 
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score, recall_score, roc_auc_score
